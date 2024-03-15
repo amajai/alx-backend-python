@@ -10,6 +10,6 @@ def make_multiplier(multiplier: float) -> Callable[[float], float]:
     takes a float n as argument and returns
     the string representation of the float.
     """
-    def f(m):
-        return m**2
-    return f
+    def fn(m: float) -> float:
+        return m * multiplier
+    return fn
