@@ -1,15 +1,12 @@
 #!/usr/bin/env python3
 """
-make_multiplier module
+element_length module
 """
-from typing import Callable
+from typing import Iterable, Sequence, List, Tuple
 
 
-def make_multiplier(multiplier: float) -> Callable[[float], float]:
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
     """
-    takes a float n as argument and returns
-    the string representation of the float.
+    element_length function return elements length
     """
-    def fn(m: float) -> float:
-        return m * multiplier
-    return fn
+    return [(i, len(i)) for i in lst]
